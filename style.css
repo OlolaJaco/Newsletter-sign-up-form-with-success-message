@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: hsl(235, 18%, 26%);
+}
+
+.main {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.left-col {
+  align-content: center;
+  color: hsl(231, 7%, 60%);
+}
+.left-col .left-box {
+  width: 90%;
+  margin: auto;
+  margin-left: 30px;
+}
+.left-col h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+}
+.left-col p {
+  margin-bottom: 20px;
+}
+.left-col .update {
+  margin-bottom: 20px;
+  align-content: center;
+}
+.left-col .update > p::before {
+  content: url(assets/images/icon-list.svg);
+  margin-right: 10px;
+}
+.left-col .labelLine {
+  display: flex;
+  justify-content: space-between;
+  width: 140%;
+}
+.left-col label {
+  color: hsl(234, 29%, 20%);
+}
+.left-col input {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.left-col button {
+  padding: 15px 20px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.left-col button:hover {
+  background-image: linear-gradient(315deg, rgb(255, 98, 87), pink);
+  box-shadow: -1px 8px 6px 7px rgba(255, 98, 87, 0.32);
+}
+
+.success {
+  width: 23%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 30px;
+  border-radius: 20px;
+  display: none;
+}
+
+.successIcon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 43px;
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 20px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(315deg, rgb(255, 98, 87), pink);
+  box-shadow: -1px 8px 6px 7px rgba(255, 98, 87, 0.32);
+}
+
+#successMail {
+  font-weight: 900;
+}
+
+@media (max-width: 425px) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .labelLine {
+    width: 80%;
+  }
+  .left-col, .right-col {
+    width: 100%;
+  }
+  .right-col img {
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+    order: -1;
+  }
+  .success {
+    width: 100%;
+  }
+  .dismissBtn {
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+  }
+}
+@media (min-width: 426px) and (max-width: 1440px) {
+  .success {
+    width: 424px;
+  }
+}/*# sourceMappingURL=style.css.map */

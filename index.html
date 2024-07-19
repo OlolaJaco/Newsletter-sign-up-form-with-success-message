@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-list.svg">
+  <link rel="stylesheet" href="style.css">
+  <title>Newsletter sign-up form with success message</title>
+
+<body>
+  <!-- Main Subscription page -->
+  <section class="main">
+    <section class="left-col">
+      <div class="left-box">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <div class="update">
+          <p>Product discovery and building what matters</p>
+          <p>Measuring to ensure updates are a success</p>
+          <p>And much more!</p>
+        </div>
+
+        <form action="">
+          <div class="labelLine">
+            <label for="email">Email address</label>
+            <span id="labelMsg"></span><br>
+          </div>
+          <input type="email" placeholder="email@company.com" id="emailInput" onchange="validateEmail()">
+        </form>
+
+        <button class="subscribeBtn" type="submit" >Subscribe to monthly newsletter</button>
+      </div>
+    </section>
+
+    <!-- Right Collumn - The one with image -->
+    <section class="right-col">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop">
+    </section>
+  </section>
+
+  <!-- Success popup after clicking the subscribe button -->
+  <section class="success">
+    <img src="assets/images/icon-success.svg" alt="success icons" class="successIcon">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <span id="successMail">ash@loremcompany. com</span>. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button class="dismissBtn">Dismiss message</button>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

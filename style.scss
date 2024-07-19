@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$Dark-Slate-Grey: hsl(234, 29%, 20%);
+$Charcoal-Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+$Tomato: rgb(255, 98, 87);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: $Charcoal-Grey;
+}
+
+.main {
+    display: flex;
+    background-color: $White;
+    padding: 20px;
+    border-radius: 20px;
+    // display: none;
+}
+
+.left-col {
+    align-content: center;
+    color: $Grey;
+    .left-box {
+        width: 90%;
+        margin: auto;
+        margin-left: 30px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: $Dark-Slate-Grey;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .update {
+        margin-bottom: 20px;
+        align-content: center;
+    }
+    .update > p::before {
+        content: url(assets/images/icon-list.svg);
+        margin-right: 10px;
+    }
+    .labelLine {
+        display: flex;
+        justify-content: space-between;
+        width: 140%;
+    }
+    label {
+        color: $Dark-Slate-Grey;
+    }
+    input {
+        padding: 15px 20px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+    }
+    button {
+        padding:15px 20px;
+        background-color: $Dark-Slate-Grey;
+        color: $White;
+        margin-top: 20px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-image: linear-gradient(315deg, $Tomato, pink);
+        box-shadow: -1px 8px 6px 7px rgba(255,98,87,0.32);
+    }
+}
+
+.success {
+    width: 23%;
+    background-color: $White;
+    padding: 30px;
+    border-radius: 20px;
+    display: none;
+}
+
+.successIcon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 43px;
+    margin-bottom: 20px;
+    color: $Dark-Slate-Grey;
+}
+p {
+    margin-bottom: 20px;
+}
+
+button {
+    padding:15px 20px;
+    background-color: $Dark-Slate-Grey;
+    color: $White;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-image: linear-gradient(315deg, $Tomato, pink);
+    box-shadow: -1px 8px 6px 7px rgba(255,98,87,0.32);
+}
+
+#successMail {
+    font-weight: 900;
+}
+
+@media (max-width: 425px) {
+    body {
+        background-color: $White;
+        position: relative;
+    }
+    
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .labelLine {
+        width: 80%;
+    }
+    .left-col, .right-col {
+        width: 100%;
+    }
+
+    .right-col img {
+        content: url(assets/images/illustration-sign-up-mobile.svg);
+        order: -1;
+    }
+
+    .success {
+        width: 100%;
+    }
+
+    .dismissBtn {
+        position: absolute;
+        bottom: 30px;
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 1440px) {
+    .success{
+        width: 424px;
+    }
+}
